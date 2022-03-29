@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kerjain</string>
+    <string name="editTex">Apa yang ingin anda lakukan ?</string>
+    <string name="button">Tambahkan</string>
+    <string name="delete">Hapus</string>
+</resources>
