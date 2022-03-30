@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sanityCheck(){
-        val todoText = binding.todoTitle.text.toString()
+        val todoText = binding.todoTextInp.text.toString()
         if(todoText.isNotEmpty()){
             val todo = Todo(todoText)
             todoAdapter.addTodo(todo)
-            todoTitle.text.clear()
+            todoText_inp.text?.clear()
         }else{
             Toast.makeText(this, "Kok kosong ? kamu mau ngapain sih ?",
                 Toast.LENGTH_LONG).show()
