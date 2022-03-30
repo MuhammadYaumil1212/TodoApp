@@ -28,16 +28,15 @@ class TodoAdapter(private val todos: MutableList<Todo>) : RecyclerView.Adapter<T
         notifyDataSetChanged()
     }
     private fun toggleStrikeThrought(todoItem: TextView, isChecked: Boolean){
-        if(isChecked){
-            todoItem.paintFlags  = todoItem.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-        }
-        todoItem.paintFlags = todoItem.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+        if(isChecked) todoItem.paintFlags  = todoItem.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+        else todoItem.paintFlags = todoItem.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
     }
     override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
         val currentTodo = todos[position]
         holder.itemView.apply {
             TodoItem.text = currentTodo.title
             checkBox.isChecked = currentTodo.isChecked
+
             toggleStrikeThrought(TodoItem, currentTodo.isChecked)
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 toggleStrikeThrought(TodoItem, isChecked)

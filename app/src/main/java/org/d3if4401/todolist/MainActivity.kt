@@ -3,6 +3,7 @@ package org.d3if4401.todolist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import org.d3if4401.todolist.databinding.ActivityMainBinding
@@ -22,13 +23,20 @@ class MainActivity : AppCompatActivity() {
         todoItems.layoutManager = LinearLayoutManager(this)
 
         buttonTodo.setOnClickListener{
-            val title = todoTitle.toString()
-            if(title.isNotEmpty()){
-                val todo = Todo(title)
-                todoAdapter.addTodo(todo)
-                todoTitle.text.clear()
-            }
+            sanityCheck()
         }
         deleteButton.setOnClickListener { todoAdapter.deleteDoneTodo() }
+    }
+
+    private fun sanityCheck(){
+        val todoText = binding.todoTitle.text.toString()
+        if(todoText.isNotEmpty()){
+            val todo = Todo(todoText)
+            todoAdapter.addTodo(todo)
+            todoTitle.text.clear()
+        }else{
+            Toast.makeText(this, "Kok kosong ? kamu mau ngapain sih ?",
+                Toast.LENGTH_LONG).show()
+        }
     }
 }
