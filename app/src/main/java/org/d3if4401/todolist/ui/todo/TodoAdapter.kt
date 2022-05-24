@@ -1,4 +1,4 @@
-package org.d3if4401.todolist
+package org.d3if4401.todolist.ui.todo
 
 import android.graphics.Paint
 import android.view.LayoutInflater
@@ -7,8 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_todo.view.*
+import org.d3if4401.todolist.R
+import org.d3if4401.todolist.model.Todo
 
-class TodoAdapter(private val todos: MutableList<Todo>) : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
+class TodoAdapter(private val todos: MutableList<Todo>)
+    : RecyclerView.Adapter<TodoAdapter.TodoViewHolder>() {
     class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {

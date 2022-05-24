@@ -1,4 +1,4 @@
-package org.d3if4401.todolist
+package org.d3if4401.todolist.model
 
 data class Todo(
     val title: String,

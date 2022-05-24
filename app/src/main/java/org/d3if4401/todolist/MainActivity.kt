@@ -2,11 +2,12 @@ package org.d3if4401.todolist
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import org.d3if4401.todolist.databinding.ActivityMainBinding
+import org.d3if4401.todolist.model.Todo
+import org.d3if4401.todolist.ui.todo.TodoAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var todoAdapter: TodoAdapter

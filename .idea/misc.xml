@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Tasks/tugas 8/TodoApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android Tasks/tugas 8/TodoApp/app/src/main/res/layout/item_todo.xml" value="0.2" />
+        <entry key="..\:/Android Tasks/tugas 8/TodoApp/app/src/main/res/layout/todo_fragment.xml" value="0.264" />
         <entry key="..\:/Kuliah/android/TodoList/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Kuliah/android/TodoList/app/src/main/res/layout/item_todo.xml" value="0.22" />
       </map>
